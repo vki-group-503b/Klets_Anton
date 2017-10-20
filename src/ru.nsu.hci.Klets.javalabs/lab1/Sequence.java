@@ -1,7 +1,9 @@
+package ru.nsu.hci.Klets.javalabs.lab1;
+
 import java.util.Scanner;
 import java.lang.String;
 
-public class posled {
+public class Sequence {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
@@ -35,3 +37,4 @@ public class posled {
         return count == 0;
     }
 }
+
