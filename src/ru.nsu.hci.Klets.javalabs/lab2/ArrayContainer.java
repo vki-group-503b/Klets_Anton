@@ -11,13 +11,13 @@ public class ArrayContainer {
         int n = in.nextInt();
         int[] mass = new int[n];
         for (int i = 0; i < n; i++) {
-            System.out.printf("Введите элемент массива №%d: ", i+1);
+            System.out.printf("Введите элемент массива №%d: ", i + 1);
             int a = in.nextInt();
             mass[i] = a;
         }
 
         Arrays.sort(mass);
-        int min=minimum(mass, n), max = maximum(mass,n);
+        int min = minimum(mass, n), max = maximum(mass, n);
         float A = average(mass, n);
         double G = geometricMean(mass, n);
         float M = median(mass, n);
@@ -29,28 +29,26 @@ public class ArrayContainer {
         System.out.printf("Медиана ряда чисел: %f", M);
     }
 
-    private static int minimum (int mass[], int n)
-    {
-        int min=Integer.MAX_VALUE;
+    private static int minimum(int mass[], int n) {
+        int min = Integer.MAX_VALUE;
         for (int i = 0; i < n; i++) {
-            if(min>mass[i])
-                min=mass[i];
+            if (min > mass[i])
+                min = mass[i];
         }
         return min;
     }
 
-    private static int maximum (int mass[], int n)
-    {
-        int max=Integer.MIN_VALUE;
+    private static int maximum(int mass[], int n) {
+        int max = Integer.MIN_VALUE;
         for (int i = 0; i < n; i++) {
-            if(max<mass[i])
-                max=mass[i];
+            if (max < mass[i])
+                max = mass[i];
         }
         return max;
     }
 
     private static float median(int mass[], int n) {
-        if(n==0)
+        if (n == 0)
             return 1;
         float x;
         int z = n / 2;
@@ -63,7 +61,7 @@ public class ArrayContainer {
     }
 
     private static float average(int mass[], int n) {
-        if(n==0)
+        if (n == 0)
             return 0;
         float x = 0;
         for (int i = 0; i < n; i++)
@@ -73,7 +71,7 @@ public class ArrayContainer {
     }
 
     private static double geometricMean(int mass[], int n) {
-        if(n==0)
+        if (n == 0)
             return 1;
         float x = 1;
         double z;
